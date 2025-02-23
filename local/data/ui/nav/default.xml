@@ -1,0 +1,18 @@
+<nav search_view="search">
+  <view name="overview" default='true' />
+  <collection label="Features">
+    <view name="pdf_report_generation" />
+  	<view name="event_annotation" />
+  </collection> 
+  <collection label="App Tools">
+    <view name="search" />
+    <view name="analytics_workspace" />
+    <view name="datasets" />
+    <view name="reports" />
+    <view name="alerts" />
+    <view name="dashboards" />
+  </collection>
+  <collection label="App Configurations">
+    <a href="/manager/jc_splunk_development/data/ui/nav/default?action=edit" target="_blank">Navigation Menu</a>
+  </collection>
+</nav>

@@ -1,0 +1,12 @@
+<form version="1.1" theme="dark">
+  <label>Event Annotation</label>
+  <fieldset submitButton="false">
+    <input type="time" token="global_time" searchWhenChanged="true">
+      <label>Time</label>
+      <default>
+        <earliest>-24h@h</earliest>
+        <latest>now</latest>
+      </default>
+    </input>
+  </fieldset>
+</form>
