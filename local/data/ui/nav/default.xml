@@ -1,6 +1,7 @@
 <nav search_view="search">
+  <view name="pdf_report_generation" default='true' />
   <collection label="App Tools">
-    <view name="search" default='true' />
+    <view name="search" />
     <view name="analytics_workspace" />
     <view name="datasets" />
     <view name="reports" />
