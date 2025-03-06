@@ -1,5 +1,6 @@
 <nav search_view="search">
   <view name="pdf_report_generation" default='true' />
+  <view name="event_annotation" />
   <collection label="App Tools">
     <view name="search" />
     <view name="analytics_workspace" />
