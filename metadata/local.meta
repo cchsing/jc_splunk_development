@@ -12,8 +12,8 @@ modtime = 1751513131.474021000
 
 [views/pdf_report_generation]
 owner = admin
-version = 9.4.1
-modtime = 1747926270.485032000
+version = 10.0.0
+modtime = 1756404862.440977000
 
 [views/event_annotation]
 owner = admin

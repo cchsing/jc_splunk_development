@@ -1,7 +1,23 @@
-<form version="1.1" theme="dark">
+<form version="1.1" theme="light">
   <label>PDF Report Generation</label>
-  <fieldset submitButton="false">
-    <input type="time" token="global_time" searchWhenChanged="true">
+  <search id="search_events_0">
+    <query>
+index=*
+| fields *
+    </query>
+    <earliest>$global_time.earliest$</earliest>
+    <latest>$global_time.latest$</latest>
+  </search>
+  <search id="search_events_1">
+    <query>
+index=* $multiselect_sourcetype$
+| fields *
+    </query>
+    <earliest>$global_time.earliest$</earliest>
+    <latest>$global_time.latest$</latest>
+  </search>
+  <fieldset submitButton="true" autoRun="true">
+    <input type="time" token="global_time" searchWhenChanged="false">
       <label>Time</label>
       <default>
         <earliest>-24h@h</earliest>
@@ -12,28 +28,39 @@
         <eval token="global_time.latest_epoch">if(isnum('latest'),'latest',relative_time(now(),'latest')</eval>
       </change>
     </input>
+    <input type="multiselect" token="multiselect_sourcetype" id="multiselect_sourcetype">
+      <label>Sourcetype</label>
+      <choice value="*">All</choice>
+      <default>*</default>
+      <prefix>(</prefix>
+      <suffix>)</suffix>
+      <valuePrefix>sourcetype="</valuePrefix>
+      <valueSuffix>"</valueSuffix>
+      <delimiter> OR </delimiter>
+      <search base="search_events_0">
+        <query>
+| dedup sourcetype
+| table sourcetype
+        </query>
+      </search>
+      <fieldForLabel>sourcetype</fieldForLabel>
+      <fieldForValue>sourcetype</fieldForValue>
+    </input>
   </fieldset>
   <row>
     <panel>
-      <title>$global_time.earliest$ - $global_time.latest$, $global_time.earliest_epoch$ - $global_time.latest_epoch$</title>
       <single>
         <title>Indexes with Data</title>
-        <search>
-          <query>(index=* OR index=_*) | stats dc(index) as count</query>
-          <earliest>$global_time.earliest$</earliest>
-          <latest>$global_time.latest$</latest>
+        <search base="search_events_1">
+          <query>| stats dc(index) as count</query>
         </search>
         <option name="drilldown">none</option>
       </single>
     </panel>
-  </row>
-  <row>
     <panel>
       <chart id="chart1">
-        <search>
-          <query>(index=* OR index=_*) | stats dc(index) as count by sourcetype</query>
-          <earliest>$global_time.earliest$</earliest>
-          <latest>$global_time.latest$</latest>
+        <search base="search_events_1">
+          <query>| stats dc(sourcetype) as count by index</query>
         </search>
         <option name="charting.chart">pie</option>
         <option name="charting.drilldown">none</option>
