@@ -7,25 +7,30 @@ version = 9.3.2
 modtime = 1740303961.741689000
 
 [nav/default]
-version = 9.4.3
-modtime = 1751513131.474021000
+version = 10.0.0
+modtime = 1757936316.934261000
 
 [views/pdf_report_generation]
 owner = admin
-version = 9.4.1
-modtime = 1747926270.485032000
+version = 10.0.0
+modtime = 1757940270.008875000
 
 [views/event_annotation]
 owner = admin
-version = 9.4.1
-modtime = 1741237472.162438000
+version = 10.0.0
+modtime = 1757940293.549873000
 
 [views/overview]
 owner = admin
-version = 9.4.3
-modtime = 1751513563.609940000
+version = 10.0.0
+modtime = 1757940020.796155000
 
 [inputs/splunktcp%3A%2F%2F9997]
 owner = admin
 version = 9.4.3
 modtime = 1751516397.580095000
+
+[views/statistical_analysis]
+owner = admin
+version = 10.0.0
+modtime = 1757936796.633924000

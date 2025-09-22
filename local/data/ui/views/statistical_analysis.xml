@@ -1,0 +1,47 @@
+<form version="1.1" theme="light">
+  <label>Statistical Analysis</label>
+  <fieldset submitButton="true">
+    <input type="time" token="global_time">
+      <label>Time</label>
+      <default>
+        <earliest>-24h@h</earliest>
+        <latest>now</latest>
+      </default>
+    </input>
+  </fieldset>
+  <row>
+    <panel>
+      <html>
+        <h1>Top &amp; Rare</h1>
+      </html>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <html>
+        <h1>Stats</h1>
+      </html>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <html>
+        <h1>Chart, Timechart, &amp; Timewrap</h1>
+      </html>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <html>
+        <h1>Trendline</h1>
+      </html>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <html>
+        <h1>Iplocation, Geostats, Geom</h1>
+      </html>
+    </panel>
+  </row>
+</form>

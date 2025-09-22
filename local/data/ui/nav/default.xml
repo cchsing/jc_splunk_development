@@ -3,6 +3,7 @@
   <collection label="Features">
     <view name="pdf_report_generation" />
   	<view name="event_annotation" />
+    <view name="statistical_analysis" />
   </collection> 
   <collection label="App Tools">
     <view name="search" />

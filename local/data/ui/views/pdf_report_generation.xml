@@ -1,4 +1,4 @@
-<form version="1.1" theme="dark">
+<form version="1.1" theme="light">
   <label>PDF Report Generation</label>
   <fieldset submitButton="false">
     <input type="time" token="global_time" searchWhenChanged="true">
@@ -15,7 +15,23 @@
   </fieldset>
   <row>
     <panel>
-      <title>$global_time.earliest$ - $global_time.latest$, $global_time.earliest_epoch$ - $global_time.latest_epoch$</title>
+      <html>
+        <div>
+          <p>Time Bucket: </p>
+          <p>Last Updated: </p>
+        </div>
+      </html>
+    </panel>
+    <panel>
+      <html>
+        <div>
+          <p>Cooldown Timer</p>
+        </div>
+      </html>
+    </panel>
+  </row>
+  <row>
+    <panel>
       <single>
         <title>Indexes with Data</title>
         <search>
@@ -29,16 +45,9 @@
   </row>
   <row>
     <panel>
-      <chart id="chart1">
-        <search>
-          <query>(index=* OR index=_*) | stats dc(index) as count by sourcetype</query>
-          <earliest>$global_time.earliest$</earliest>
-          <latest>$global_time.latest$</latest>
-        </search>
-        <option name="charting.chart">pie</option>
-        <option name="charting.drilldown">none</option>
-        <option name="refresh.display">progressbar</option>
-      </chart>
+      <html>
+        <h1>Inventory - Servers</h1>
+      </html>
     </panel>
   </row>
 </form>
