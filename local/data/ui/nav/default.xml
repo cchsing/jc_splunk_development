@@ -4,7 +4,10 @@
     <view name="pdf_report_generation" />
   	<view name="event_annotation" />
     <view name="statistical_analysis" />
-  </collection> 
+  </collection>
+  <collection label="Inventory">
+    <view name="inventory_servers" />
+  </collection>
   <collection label="App Tools">
     <view name="search" />
     <view name="analytics_workspace" />

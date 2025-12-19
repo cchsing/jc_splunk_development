@@ -8,12 +8,12 @@ modtime = 1740303961.741689000
 
 [nav/default]
 version = 10.0.0
-modtime = 1757936316.934261000
+modtime = 1758552284.098327000
 
 [views/pdf_report_generation]
 owner = admin
 version = 10.0.0
-modtime = 1757940270.008875000
+modtime = 1758552342.162353000
 
 [views/event_annotation]
 owner = admin
@@ -34,3 +34,8 @@ modtime = 1751516397.580095000
 owner = admin
 version = 10.0.0
 modtime = 1757936796.633924000
+
+[views/inventory_servers]
+owner = admin
+version = 10.0.0
+modtime = 1758552298.365162000

@@ -43,11 +43,4 @@
       </single>
     </panel>
   </row>
-  <row>
-    <panel>
-      <html>
-        <h1>Inventory - Servers</h1>
-      </html>
-    </panel>
-  </row>
 </form>
