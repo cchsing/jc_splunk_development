@@ -1,4 +1,4 @@
-<form version="1.1" theme="light">
+<form version="1.1" theme="dark">
   <label>PDF Report Generation</label>
   <fieldset submitButton="false">
     <input type="time" token="global_time" searchWhenChanged="true">
@@ -41,6 +41,31 @@
         </search>
         <option name="drilldown">none</option>
       </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <html depends="$export_button$">
+        <div>
+          <a class="btn btn-primary" href="/api/search/jobs/$export_sid$/results?isDownload=true&amp;timeFormat=%25FT%25T.%25Q%25%3Az&amp;count=0&amp;filename=test.csv&amp;outputMode=csv">Download CSV</a>
+        </div>
+      </html>
+      <table>
+        <search>
+          <query>index=_internal sourcetype=splunkd
+| table _time, host, source, sourcetype, _raw</query>
+          <earliest>$global_time.earliest$</earliest>
+          <latest>$global_time.latest$</latest>
+          <progress>
+            <unset token="export_button"></unset>
+          </progress>
+          <done>
+            <set token="export_sid">$job.sid$</set>
+            <set token="export_button">1</set>
+          </done>
+        </search>
+        <option name="drilldown">none</option>
+      </table>
     </panel>
   </row>
 </form>
