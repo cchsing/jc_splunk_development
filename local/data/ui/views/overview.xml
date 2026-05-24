@@ -25,7 +25,7 @@
           <tbody>
             <tr>
               <td>1</td>
-              <td>PDF Report Generation</td>
+              <td><a href="./pdf_report_generation" target="_blank">PDF Report Generation</a></td>
               <td>Dashboard for generating customized PDF report.</td>
             </tr>
             <tr>

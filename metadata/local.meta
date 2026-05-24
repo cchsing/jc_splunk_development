@@ -22,8 +22,8 @@ modtime = 1757940293.549873000
 
 [views/overview]
 owner = admin
-version = 10.0.0
-modtime = 1757940020.796155000
+version = 10.4.0
+modtime = 1779610884.627034000
 
 [inputs/splunktcp%3A%2F%2F9997]
 owner = admin
